@@ -1,0 +1,13 @@
+version: '3'
+services:
+
+  vlabeler:
+    image: vlabeler:ds
+    build: 
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - ./data:/data
+      - /tmp/.X11-unix:/tmp/.X11-unix
