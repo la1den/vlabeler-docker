@@ -8,6 +8,7 @@ services:
       dockerfile: ./Dockerfile
     environment:
       - DISPLAY=${DISPLAY}
+    network_mode: "host"
     volumes:
       - ./data:/data
       - /tmp/.X11-unix:/tmp/.X11-unix
