@@ -1,5 +1,5 @@
 #!/bin/bash
 
-xhost +
+xhost +local:
 docker-compose run vlabeler 
-xhost -
+xhost -local:
